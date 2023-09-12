@@ -54,3 +54,28 @@ body{
   float: right;
   cursor: pointer;
 }
+.Menu{
+  position: absolute;
+  border: 1px solid  hsl(216, 8%, 88%) ;
+  width: 150px;
+  height: 700px;
+  top: 40px;
+  margin: 0% auto;
+  background-color: #fff;
+}
+.like{
+  font-size: small;
+  top: 60%;
+  position: relative;
+  left: 0%;
+}
+.com{
+  font-size: small;
+  top: 50%;
+  position: relative;
+  left: 30%;
+}
+.likeclick{
+  position: absolute;
+  
+}
