@@ -1,0 +1,22 @@
+.sidebar{
+    border-right: 1px solid #b7d0e1 ;
+    flex: 0.2;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.sidebar__loveIcon{
+    color: #93a0c6;
+    font-size: 40px;
+    margin-left: 20px;
+   margin-bottom: 20px;
+}
+.sidebar__post{
+    position: absolute;
+    top: 20px;
+    background-color: #fee1e8;
+    color: #fff;
+    font-weight: 200;
+    text-transform: inherit;
+    border-radius: 20px;
+}
