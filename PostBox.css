@@ -1,0 +1,47 @@
+.postbox{
+    padding-bottom: 10px;
+    border-bottom: 8px solid #fff;
+    padding-right: 10px;
+}
+.postbox > form {
+    display: flex;
+    flex-direction: column;
+}
+.postbox__input{
+    padding: 30px;
+    display: flex;
+}
+.postbox__input > input{
+    flex: 1;
+    margin-right: 20px;
+    font-size: 20px;
+    border: none;
+}
+.postbox_btn{
+    position: absolute;
+    left: 70px;
+    background-color: #fff;
+    color: black;
+    font-weight: 200;
+    text-transform: inherit;
+    border-radius: 0px;
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+.postbox_img{
+    top: 1px;
+    border: none;
+    position: relative;
+    left: 50px;
+    padding: 10px; 
+    background-color: #fee1e8;
+}
+.postbox_w{
+    position: relative;
+    background-color: #fee1e8;
+    border: none;
+    left: 40px;
+    padding: 10px;
+}
