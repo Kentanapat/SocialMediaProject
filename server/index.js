@@ -80,14 +80,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/', (req, res) => {
-  res.send('<a href="/auth/google">Authenticate with Google</a>'); //log in URL + google login button
+  res.send('<a href="/auth/google">Authenticate with Google</a>'); //login page URL 
 });
 
 app.get('/auth/google',
   passport.authenticate('google', { scope: [ 'email', 'profile' ] }
 ));
 
-app.get( '/auth/google/home',
+app.get( '/auth/google/callback',
   passport.authenticate( 'google', {
     successRedirect: '/protected',
     failureRedirect: '/auth/google/failure'
