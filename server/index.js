@@ -61,3 +61,52 @@ mongoose
     
   })
   .catch((error) => console.log(`${error} did not connect`));
+
+ 
+/* GOOGLE AUTH */
+const express = require('express');
+const session = require('express-session');
+const passport = require('passport');
+require('./auth');
+
+
+
+function isLoggedIn(req, res, next) {
+  req.user ? next() : res.sendStatus(401);
+}
+
+app.use(session({ secret: 'cats'}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.get('/', (req, res) => {
+  res.send('<a href="/auth/google">Authenticate with Google</a>'); //login page URL 
+});
+
+app.get('/auth/google',
+  passport.authenticate('google', { scope: [ 'email', 'profile' ] }
+));
+
+app.get( '/auth/google/callback',
+  passport.authenticate( 'google', {
+    successRedirect: '/protected',
+    failureRedirect: '/auth/google/failure'
+  })
+);
+
+app.get('/protected', isLoggedIn, (req, res) => { // you can change /protected into the webpage
+  res.send(`Hello ${req.user.displayName}`);
+});
+
+app.get('/logout', (req, res) => { //log out
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        res.redirect('/');
+      });
+    });
+
+app.get('/auth/google/failure', (req, res) => {
+  res.send('Failed to authenticate..');
+});
+
+app.listen(3001, () => console.log('listening on port: 3001'));
