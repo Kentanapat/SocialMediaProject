@@ -1,0 +1,105 @@
+.box1{
+    border-right: 1px solid #93a0c6 ;
+    flex: 0.2;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.notilogo{
+    position: absolute;
+    left: 375px;
+    color:#93a0c6 ;
+    font-size: 35px;
+}
+.noti{
+    position: absolute;
+    left: 410px;
+    color: #93a0c6;
+    font-size: 20px;
+    font-weight: 500%;
+}
+.midlay{
+    position: absolute;
+    background-color: aliceblue;
+    border-radius: 10px;
+    top: 100px;
+    left: 370px;
+    width: 500px;
+    height: 70px;
+}
+.midlaytext{
+    position: absolute;
+    top: 50%;
+    left: 35%; 
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: rgb(128, 128, 128);
+    font-weight: 400;
+}
+.lovereact{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: #e3242b;
+    font-size: 20px;
+}
+.midlay1{
+    position: absolute;
+    top: 100px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    left: 1.5px;
+    width: 500px;
+    height: 70px;
+}
+.midlaytext1{
+    position: absolute;
+    top: 50%;
+    left: 35%; 
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: rgb(128, 128, 128);
+    font-weight: 400;
+}
+.midlay2{
+    position: absolute;
+    top: 200px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    left: 1.5px;
+    width: 500px;
+    height: 150px;
+}
+.midlaytext2{
+    position: absolute;
+    top: 40%;
+    left: 35%; 
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: rgb(128, 128, 128);
+    font-weight: 400;
+}
+.commentreact{
+    position: relative;
+    top: 10px;
+    left: 20px;
+    color: #3ded97;
+    font-size: 20px;
+}
+.midlaytext3{
+    position: absolute;
+    top: 65%;
+    left: 45%; 
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    color: rgb(128, 128, 128);
+    font-weight: 400;
+}
+.reply{
+    position: absolute;
+    top: 90px;
+    left: 80px;
+}
+.noticolor{
+    color: #93a0c6;
+}
