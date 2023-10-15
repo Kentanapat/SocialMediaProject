@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
 import SignUpForm from "./components/SignUpForm";
 import "./styles.css";
 
+
+
 export default function App() {
+
+ 
+
   const [isShowSignUp, setIsShowSignUp] = useState(true);
 
   const handleSignUpClick = () => {
@@ -13,8 +18,8 @@ export default function App() {
   return (
     <div className="App">
       <div className="NavBar">
-      <NavBar handleSignUpClick={handleSignUpClick}/>
-      <SignUpForm isShowSignUp={isShowSignUp} />
+        <NavBar handleSignUpClick={handleSignUpClick} />
+        <SignUpForm isShowSignUp={isShowSignUp} />
       </div>
     </div>
   );
