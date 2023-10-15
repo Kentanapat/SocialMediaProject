@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import LoginForm from "./components/LoginForm";
+import NavBar from "./components/NavBar";
+import SignUpForm from "./components/SignUpForm";
+import "./styles.css";
+import background from "./images/welcomeBG.gif";
+import "./index.css";
 
-function App() {
+export default function App() {
+  const [isShowLogin, setIsShowLogin] = useState(false);
+
+  const handleLoginClick = () => {
+    setIsShowLogin((isShowLogin) => !isShowLogin);
+  };
+
+  const [isShowSignUp, setIsShowSignUp] = useState(false);
+
+  const handleSignUpClick = () => {
+    setIsShowSignUp((isShowSignUp) => !isShowSignUp);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div 
+      class="bk_Img"
+      style={{
+        backgroundImage: "url(" + background + ")",
+        backgroundPosition: 'center',
+        backgroundSize: "cover",
+        backgroundRepeat: 'no-repeat',
+        // width: '100%',
+        width: '1730px',
+        height: '100%',
+        right: '160px',
+        bottom: '140px'
+      }}>
+        <div className="App">
+          <div className="NavBar">
+            <NavBar handleLoginClick={handleLoginClick} handleSignUpClick={handleSignUpClick}/>
+            <LoginForm isShowLogin={isShowLogin} />
+            <SignUpForm />
+          </div>
+        </div>
+      </div>
   );
 }
-
-export default App;
