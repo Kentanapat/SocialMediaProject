@@ -1,0 +1,13 @@
+body, html {
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    place-items: center;
+    font-family: 'Itim, sans-serif';
+    overflow: hidden;
+  }
+  
+  code {
+    font-family: 'Itim, sans-serif';
+  }

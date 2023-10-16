@@ -55,7 +55,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-//get some friends bro, ur not egocentric
+//get some friends
 router.get("/friends/:userId", async (req, res) => {
   try {
     const user = await User.findById(req.params.userId);
