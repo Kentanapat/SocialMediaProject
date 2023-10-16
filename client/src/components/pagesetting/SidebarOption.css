@@ -1,0 +1,21 @@
+.sidebarOption{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+}
+.sidebarOption:hover{
+    background-color: #b7d0e1;
+    border-radius: 30px;
+    color: #fff;
+    transition: color 100ms ease-out;
+}
+
+.sidebarOption > h2{
+    position: relative;
+    font-size: 20px;
+    font-weight: 100px;
+    margin-right: 20px;
+    top: 3.5px;
+    left: 2.5px;
+}
