@@ -7,15 +7,19 @@ import Noti from "./components/noti/Noti";
 import ProfilePage from "./components/profilepage/ProfilePage";
 import PageSetting from "./components/pagesetting/PageSetting";
 import PageFav from "./components/pagefav/PageFav";
-
-
+import LoginForm from "./components/signup/LoginForm"
+import SignUpForm from "./components/signup/SignUpForm"
 function App() {
   return (
    <div className="app">
            <BrowserRouter>
                <Routes>
-                <Route path="/" element={<Layout/>}>
+                <Route path="/" element={<LoginForm/>}>
                 </Route>
+                <Route path="/login" element={<LoginForm/>} />
+                <Route path="/mainmenu" element={<Layout/>}>
+                </Route>
+                <Route path="/signup" element={<SignUpForm/>} />
                 <Route path="/search" element={<PageSearch/>}>
                 <Route index element={<div><PageSearch/></div>}/>
                 <Route path="posts" element={<PageSearch/>}/>
