@@ -1,0 +1,120 @@
+.sideset{
+    border-right: 1px solid #93a0c6 ;
+    flex: 0.2;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.setlogo{
+    position: absolute;
+    top: 30px;
+    left: 300px;
+    color:#93a0c6 ;
+    font-size: 35px;
+}
+.text{
+    position: absolute;
+    top: 55px;
+    left: 300px;
+    color: #93a0c6;
+    font-size: 20px;
+    font-weight: 500%;
+}
+.pro-logo{
+    position: absolute;
+    top: 150px;
+    left: 350px;
+    font-size: 25px;
+    
+}
+.text_icon{
+    position: absolute;
+    top: 152px;
+    left: 420px;
+    cursor: pointer;
+}
+.text_icon:hover{
+    background-color: #b7d0e1;
+    border-radius: 30px;
+    color: #fff;
+    padding: 15px;
+    transition: color 100ms ease-out;
+}
+.mode-logo{
+    position: absolute;
+    top: 250px;
+    left: 350px;
+    font-size: 25px;
+}
+.text_icon1{
+    position: absolute;
+    top: 250px;
+    left: 420px;
+    cursor: pointer;
+}
+.text_icon1:hover{
+    background-color: #b7d0e1;
+    border-radius: 30px;
+    color: #fff;
+    padding: 15px;
+    transition: color 100ms ease-out;
+}
+.sec-logo{
+    position: absolute;
+    top: 350px;
+    left: 350px;
+    font-size: 25px;
+}
+.text_icon2{
+    position: absolute;
+    top: 350px;
+    left: 420px;
+    cursor: pointer;
+}
+.text_icon2:hover{
+    background-color: #b7d0e1;
+    border-radius: 30px;
+    color: #fff;
+    padding: 15px;
+    transition: color 100ms ease-out;
+}
+.no-logo{
+    position: absolute;
+    top: 450px;
+    left: 350px;
+    font-size: 25px;
+}
+.text_icon3{
+    position: absolute;
+    top: 450px;
+    left: 420px;
+    cursor: pointer;
+    
+}
+.text_icon3:hover{
+    background-color: #b7d0e1;
+    border-radius: 30px;
+    color: #fff;
+    padding: 15px;
+    transition: color 100ms ease-out;
+}
+.back-logo{
+    position: absolute;
+    top: 600px;
+    left: 300px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.search_set{
+    position: absolute;
+    top: 50px;
+    left: 450px;
+    background-color: #fff;
+    border-radius: 30px;
+    width: 300px;
+    height: 2.5rem;
+    padding: 0 25px;
+    box-shadow: 0px 0px 8px #ddd;
+    display: flex;
+    color: black;
+}

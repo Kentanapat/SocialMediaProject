@@ -1,0 +1,41 @@
+.side{
+    border-right: 1px solid #93a0c6 ;
+    flex: 0.2;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.search_bar{
+    position: absolute;
+    top: 50px;
+    left: 450px;
+    background-color: #fff;
+    border-radius: 30px;
+    width: 300px;
+    height: 2.5rem;
+    padding: 0 25px;
+    box-shadow: 0px 0px 8px #ddd;
+    display: flex;
+    color: black;
+}
+.input{
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  font-size: 1.25rem;
+  width: 100%;
+  margin-left: 5px;
+}
+input:focus{
+    outline: none;
+}
+.search_icon{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+.R{
+    position: absolute;
+    top: 50px;
+    right: 150px;
+}
