@@ -1,23 +1,19 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-const postSchema = mongoose.Schema(
+const PostSchema = new mongoose.Schema(
   {
     userId: {
       type: String,
       required: true,
     },
-    description:{
-        type: String,
-        max: 200
+    desc: {
+      type: String,
+      max: 500,
     },
-    picturepath:{
-        type:String,    
+    img: {
+      type: String,
     },
     likes: {
-      type: Map,
-      of: Boolean,
-    },
-    comments: {
       type: Array,
       default: [],
     },
@@ -25,6 +21,4 @@ const postSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-const Post = mongoose.model("Post", postSchema);
-
-export default Post;
+module.exports = mongoose.model("Post", PostSchema);
