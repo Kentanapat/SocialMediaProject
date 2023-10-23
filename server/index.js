@@ -1,35 +1,45 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const helmet = require("helmet");
+const cors = require("cors");
 const morgan = require("morgan");
-
-const app = express();
-const userRoute = require("./routes/users");
-const authRoute = require("./routes/auth");
+const bodyParser = require("body-parser");
+const helmet = require("helmet");
+const mongoose = require("mongoose");
 
 
 dotenv.config();
+const app = express();
+const PORT = process.env.PORT || 6001;
+const userRoute = require("./routes/users.js");
+const authRoute = require("./routes/auth.js");
 
-//mongoose setup
-mongoose.set('strictQuery', true);
-mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true},()=>{
-  console.log("MongoDB is connected");
+//mongoose
+mongoose.set('strictQuery',true);
+mongoose.connect(process.env.MONGO_URL,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 })
+.then(() => {
+  console.log('Connected to MongoDB');
+})
+.catch((err) => {
+  console.error('Error connecting to MongoDB:', err);
+});
 
 //middlewares
-app.use(express.json());
 app.use(helmet());
-app.use(morgan("common")); 
+app.use(express.json());
+app.use(morgan("common"));
+app.use(cors());
 
 //Routes
-app.use("/api/users",userRoute);
+app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 
 app.get("/",(req,res)=>{
   res.send("Homepage");
 })
 
-app.listen(3001,()=>{
-  console.log("Backend is functional");
-})
+app.listen(PORT, ()=> {
+  console.log(`Server running on ${PORT}`);
+});
