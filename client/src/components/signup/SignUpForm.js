@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { GoogleLogin } from "react-google-login";
 import { gapi } from "gapi-script";
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 const SignUpForm = ({ isShowSignUp }) => {
     const navigate = useNavigate();
     const clientId = "718107053984-6vf20q1hpm4ok2iiibc81vcf7j5dfua4.apps.googleusercontent.com"
@@ -20,27 +20,37 @@ const SignUpForm = ({ isShowSignUp }) => {
     const responseGoogle = async (googleuser) => {
         console.log(googleuser);
         console.log(JSON.stringify({ 'email': googleuser.googleId, 'type': 'google' }));
-
-        try {
-            const response = await fetch('localhost:3001/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ 'email': googleuser.profileObj.email, 'type': 'google' }),
-            });
-            if (response.ok) {
-                console.log(response);
-                const data = await response.json();
-                //   console.log('Authentication token:', data.token);
-                navigate('/mainmenu');
-
-            } else {
-                console.log('Invalid credentials:');
-            }
-        } catch (error) {
+        axios.post('http://localhost:3001/api/auth/login', {
+            email: googleuser.profileObj.email,
+            type: 'google'
+          })
+          .then(function (response) {
+            console.log(response);
+            navigate('/mainmenu');
+          })
+          .catch(function (error) {
             console.log(error);
-        }
+          });
+        // try {
+        //     const response = await fetch('http://localhost:3001/login', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify({ 'email': googleuser.profileObj.email, 'type': 'google' }),
+        //     });
+        //     if (response.ok) {
+        //         console.log(response);
+        //         const data = await response.json();
+        //         //   console.log('Authentication token:', data.token);
+        //         navigate('/mainmenu');
+
+        //     } else {
+        //         console.log('Invalid credentials:');
+        //     }
+        // } catch (error) {
+        //     console.log(error);
+        // }
         //  <Navigate to="/mainmenu" />
     }
 
