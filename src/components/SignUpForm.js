@@ -18,7 +18,7 @@ const SignUpForm = ({ isShowSignUp}) => {
                         <label style={{ fontFamily: 'Itim, sans-serif' }}>Password</label><br></br>
                         <input type="password" name="password" className="SignUp-box" /><br></br>
                         <label style={{ fontFamily: 'Itim, sans-serif' }}>Confirm Password</label><br></br>
-                        <input type="confirmpassword" name="confirmpassword" className="SignUp-box" /><br></br>
+                        <input type="password" name="password" className="SignUp-box" /><br></br>
                         <input style={{ fontFamily: 'Itim, sans-serif' }} type="submit" value="SIGN UP" className="SignUp-btn" />
                     </form>
                 </div>

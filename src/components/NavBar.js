@@ -1,13 +1,15 @@
 import React from "react";
 
-function NavBar({ handleLoginClick,handleSignUpClick}) {
+function NavBar({ handleLoginClick, handleSignUpClick}) {
 
     const handleClick = () => {
         handleLoginClick()
     }
+
     const handleClick2 = () => {
         handleSignUpClick()
     }
+
         return (
             <div className="navbar">
                 <div>
