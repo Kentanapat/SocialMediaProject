@@ -25,11 +25,32 @@ const SignUpForm = ({ isShowSignUp }) => {
             type: 'google'
           })
           .then(function (response) {
-            console.log(response);
+            localStorage.setItem("email",response.data.email)
             navigate('/mainmenu');
           })
           .catch(function (error) {
-            console.log(error);
+            if (error.response.data  == "google register") {
+                axios.post('http://localhost:3001/api/auth/register', {
+                    username: googleuser.googleId,
+                    email: googleuser.profileObj.email,
+                    password: "",
+                  })
+                  .then(function (response) {
+                    axios.post('http://localhost:3001/api/auth/login', {
+                    email: googleuser.profileObj.email,
+                    type: 'google'
+                  })
+                  .then(function (response) {
+                    console.log(response)
+                  })
+                  .catch(function (error) {
+                    console.log(error)
+                  });
+                  })
+                  .catch(function (error) {
+                    console.log(error)
+                  });
+            }
           });
         // try {
         //     const response = await fetch('http://localhost:3001/login', {
@@ -74,7 +95,7 @@ const SignUpForm = ({ isShowSignUp }) => {
                         <input style={{ fontFamily: 'Itim, sans-serif' }} type="submit" value="SIGN UP" className="signup-btn" />
                         <GoogleLogin
                             clientId={clientId}
-                            buttonText="Google Login"
+                            buttonText="Google Signup"
                             onSuccess={responseGoogle}
                             onFailure={responseGoogle}
                             cookiePolicy={'single_host_origin'}

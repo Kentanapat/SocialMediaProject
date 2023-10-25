@@ -9,6 +9,7 @@ function Post(){
        <div className="Post">
         <div className="Post__header">
             <h2>Home</h2>
+            <p>Welcome!  {localStorage.getItem("email")}</p>
         </div>
        <PostBox />
        {posts.map(post =>(

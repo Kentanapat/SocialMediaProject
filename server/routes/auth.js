@@ -31,21 +31,29 @@ router.post("/login", async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
     console.log('user :' + user);
     if (!user) {
-      res.status(400).json("user not found")
+      if (!req.body.type || req.body.type != "google") {
+        res.status(400).json("user not found")
+      }else{
+        res.status(400).json("google register")
+      }
     }else{
-      res.status(200).json({ message: 'ok mawin' });
+      if (req.body.type) {
+        if (req.body.type != "google") {
+          const validPassword = await bcrypt.compare(req.body.password, user.password)
+          console.log(validPassword);
+          if (!validPassword) {
+          res.status(400).json("wrong password")
+          } else {
+            res.status(200).json(user)
+          }
+        } else {
+          res.status(200).json(user)
+        }
+      } else {
+        res.status(400).json("wrong type")
+      }
     }
-    // !user && ;
-    // if (req.body.type) {
-    //   if (req.body.type != "google") {
-    //     const validPassword = await bcrypt.compare(req.body.password, user.password)
-    //     !validPassword && res.status(400).json("wrong password")
-    //   } else {
-    //     res.status(200).json(user)
-    //   }
-    // } else {
-    //   res.status(400).json("wrong type")
-    // }
+   
 
   } catch (err) {
     res.status(500).json(err)

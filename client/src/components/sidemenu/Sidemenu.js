@@ -40,8 +40,6 @@ function Sidemenu(){
 
         <div className="sidebar">
         <GiRoyalLove className="sidebar__loveIcon"/>
-
-        
         < SidebarOption active Icon={FaHome} text="Home"/>
         < SidebarOption Icon={BsSearchHeartFill} text="Search"/>
         < SidebarOption Icon={MdNotifications} text="Notifications"/>
