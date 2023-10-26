@@ -39,3 +39,23 @@ input:focus{
     top: 50px;
     right: 150px;
 }
+.linkhome{
+    text-decoration: none;
+    color: black;
+}
+.linknoti{
+    text-decoration: none;
+    color: black;
+}
+.linkfav{
+    text-decoration: none;
+    color: black;
+}
+.linkpro{
+    text-decoration: none;
+    color: black;
+}
+.linkset{
+    text-decoration: none;
+    color: black;
+}

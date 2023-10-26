@@ -14,18 +14,31 @@ import {ImProfile} from 'react-icons/im';
 import {IoInvertModeSharp ,IoCaretBackOutline} from 'react-icons/io5';
 import {MdRemoveModerator} from 'react-icons/md';
 import {RxAvatar} from 'react-icons/rx';
+import { Link } from 'react-router-dom';
 
 function PageSetting() {
     const[search, setSerch] = useState("")
   return (
     <div className="sideset">
     <GiRoyalLove className="sidebar__loveIcon"/>
+    <Link to="/" className='linkhome'>
     <SidebarOption  Icon={FaHome} text="Home"/>
+    </Link>
+    <Link to="/search" className='linksearch'>
     < SidebarOption Icon={BsSearchHeartFill} text="Search"/>
+    </Link>
+    <Link to="/noti" className='linknoti'>
     <SidebarOption Icon={MdNotifications} text="Notification" /> 
+    </Link>
+    <Link to="/fav" className='linkfav'>
     < SidebarOption Icon={FaBookmark} text="Bookmark"/>
+    </Link>
+    <Link to="/profile" className='linkpro'>
     < SidebarOption Icon={CgProfile} text="Profile"/>
+    </Link>
+    <Link to="/setting" className='linkset'>
     < SidebarOption Icon={IoIosSettings} text="Setting"/>
+    </Link>
 
     <div className="search_set">
            <BsSearchHeart className="search_icon"/>
@@ -54,4 +67,4 @@ function PageSetting() {
   )
 }
 
-export default PageSetting
+export default PageSetting;

@@ -5,6 +5,30 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+.linksearch{
+    text-decoration: none;
+    color: black;
+}
+.linknoti{
+    text-decoration: none;
+    color: black;
+}
+.linkfav{
+    text-decoration: none;
+    color: black;
+}
+.linkmessage{
+    text-decoration: none;
+    color: black;
+}
+.linkpro{
+    text-decoration: none;
+    color: black;
+}
+.linkset{
+    text-decoration: none;
+    color: black;
+}
 .sidebar__loveIcon{
     color: #93a0c6;
     font-size: 40px;

@@ -11,6 +11,7 @@ import {CgProfile} from 'react-icons/cg';
 import {IoIosSettings} from 'react-icons/io';
 import{GiRoyalLove} from 'react-icons/gi';
 import './Noti.css';
+import { Link } from "react-router-dom";
 
 function Noti(){
     return(
@@ -34,12 +35,22 @@ function Noti(){
         </div>
         <GiRoyalLove className="sidebar__loveIcon"/>
 
-        < SidebarOption active Icon={FaHome} text="Home"/>
+        <Link to="/" className="linkhome">
+       <SidebarOption  active Icon={FaHome} text="Home"/>
+       </Link>
+       <Link to="/search" className='linksearch'>
         < SidebarOption Icon={BsSearchHeartFill} text="Search"/>
+        </Link>
         <SidebarOption Icon={MdNotifications} text="Notification" />
+        <Link to="/fav" className='linkfav'>
         < SidebarOption Icon={FaBookmark} text="Bookmark"/>
+        </Link>
+        <Link to="/profile" className='linkpro'>
         < SidebarOption Icon={CgProfile} text="Profile"/>
-        < SidebarOption Icon={IoIosSettings} text="Setting"/>
+        </Link>
+        <Link to="/setting" className='linkset'>
+        < SidebarOption Icon={IoIosSettings} text="Setting" />
+         </Link>
          
        </div>
        
