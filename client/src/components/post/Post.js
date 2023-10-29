@@ -3,8 +3,9 @@ import PostBox from "../postbox/Postbox";
 import "./Post.css"
 import FeedPost from "../feedpost/FeedPost";
 
+
 function Post(){
-   const [posts,setPost] = useState([]) ;
+   const [posts,setPost] = useState([]);
     return(
        <div className="Post">
         <div className="Post__header">
@@ -13,12 +14,13 @@ function Post(){
         </div>
        <PostBox />
        {posts.map(post =>(
-       <FeedPost
+       <FeedPost 
        displayName={post.displayName}
        text={post.text} 
        avatar={post.avatar}
-       image={post.image} />
-
+       image={post.image} 
+      />
+       
      ))}
        
 

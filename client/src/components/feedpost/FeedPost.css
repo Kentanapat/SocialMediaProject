@@ -1,5 +1,8 @@
 .feedpost{
-    display: flex;
+    display: flex; 
+    position: absolute;
+    top: 30%;
+    left: 20%;
     align-items: flex-start;
     border-bottom: 1px solid #fff;
     padding-bottom: 10px;
@@ -13,8 +16,28 @@
 }
 .feed_post_footer{
     display: flex;
+    position: absolute;
     justify-content: space-between;
     margin-top: 10px;
+}
+.like{
+    position: absolute;
+    top: 50px;
+}
+.comment{
+    position: absolute;
+    top: 50px;
+    left: 80px;
+}
+.sh{
+    position: absolute;
+    top: 50px;
+    left: 180px;
+}
+.fav{
+    position: absolute;
+    top: 50px;
+    left: 290px;
 }
 .feed_text >h3{
     font-size: 14px;

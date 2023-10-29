@@ -11,17 +11,19 @@
     scrollbar-width: none;
 } */
 .Post__header{
-    position: sticky;
+    position: absolute;
     top: 0;
+    left: 20%;
     background-color: #fce4ec;
     font-family: 'Times New Roman', Times, serif;
     z-index: 100;
     border: 1px solid #fff;
-    padding: 15px 20px;
+    padding: 10px 250px;
 }
 .Post__header > h2{
+    position: absolute;
+    left: 10%;
     font-size: 20px;
     font-weight: 800;
     
-
 }

@@ -1,9 +1,9 @@
-import React from 'react';
+import React , {useState} from 'react';
 import "./FeedPost.css";
 import { RxAvatar } from "react-icons/rx";
 import {CiHeart} from "react-icons/ci";
-import {BsChatDots} from "react-icons/bs"
-import {FaBookmark, FaRegShareSquare} from "react-icons/fa"
+import {BsChatDots} from "react-icons/bs";
+import {FaBookmark, FaRegShareSquare} from "react-icons/fa";
 
 function FeedPost({displayName ,text, image, avatar}) {
    return(
@@ -24,10 +24,10 @@ function FeedPost({displayName ,text, image, avatar}) {
      </div>
      <img src={image} alt=""/>
      <div className="feed_post_footer">
-     <CiHeart fontSize="small"/>
-     <BsChatDots fontSize="small"/>
-     <FaRegShareSquare fontSize="small"/>
-     <FaBookmark fontSize="small"/>
+     <CiHeart className='like' fontSize="small"/>
+     <BsChatDots className='comment' fontSize="small"/>
+     <FaRegShareSquare className='sh' fontSize="small"/>
+     <FaBookmark className='fav' fontSize="small"/>
      </div>
     </div>
     </div>

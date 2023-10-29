@@ -13,6 +13,8 @@
   }
 }
 
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -45,6 +47,7 @@ body {
   background-size: cover;
   width: 100% !important;
   height: auto;
+  overflow: hidden;
 }
 .navbar {
   position: absolute;
@@ -61,12 +64,15 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  position: relative;
+  top: 70px;
+  left: 50px;
 }
 
 .submitform-box{
   margin-top: 7vh;
   opacity:80%;
-  background: #fee1e8;
+  background: #ffffff;
   padding-right: 80px;
   padding-left: 80px;
   border-radius: 20px;
@@ -75,7 +81,7 @@ body {
 
 .signup-text{
   width: 100%;
-  color: white;
+  color: rgba(0, 0, 0, 0.76);
   border-bottom: 2px solid white;
   line-height: 30px;
   width: 100%;
@@ -88,19 +94,19 @@ body {
 }
 
 label {
-  color:white;
+  color:rgba(0, 0, 0, 0.76);
   width: 100%;
   text-align: center;
 }
 
 .signup-box{
-  border: 5px solid rgb(255, 255, 255);
+  border: 5px solid rgba(0, 0, 0, 0.103);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
   padding: 2px;
-  padding-left: 10px;
+  padding-left: 20px;
   letter-spacing: 1px;
   font-weight: 600;
   margin: 5px;
@@ -108,7 +114,7 @@ label {
   background: transparent;
   transition: 1s;
   outline: none;
-  width: 90%;
+  width: 100%;
 }
 button{
   width: 100% !important;
@@ -117,8 +123,8 @@ button{
   width: 75%;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
-  color: #fee1e8;
+  background-color: #f6adbe;
+  color: #ffffff;
   margin-top: 5px;
   border-radius: 24px;
   border: none;
@@ -134,7 +140,7 @@ button{
 .signup-btn:hover{
   transform: scale(1.03);
   letter-spacing: 4px;
-  background-color: #ffffff;
+  background-color: #fc88a3;
   color: #ffffff;
 }
 
@@ -205,13 +211,16 @@ button{
   justify-content: center;
   align-items: center;
   /* min-height: 100vh; */
+  position: relative;
+  top: 75px;
+  left: 70px;
 }
 
 
 .form-box{
   margin-top:20vh;
   opacity:80%;
-  background: #fee1e8;
+  background: #ffffff;
   padding-right: 80px;
   padding-left: 80px;
   border-radius: 20px;
@@ -220,8 +229,8 @@ button{
 
 .login-text{
   width: 100%;
-  color: white;
-  border-bottom: 2px solid white;
+  color: rgba(0, 0, 0, 0.76);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.76);
   line-height: 30px;
   width: 100%;
   font-weight: bolder;
@@ -233,13 +242,13 @@ button{
 }
 
 label {
-  color:white;
+  color:rgba(0, 0, 0, 0.76);
   width: 100%;
   text-align: center;
 }
 
 .login-box{
-  border: 5px solid rgb(255, 255, 255);
+  border: 5px solid rgba(0, 0, 0, 0.103);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -261,7 +270,7 @@ label {
   width: 75%;
   justify-content: center;
   align-items: center;
-  background-color: rgb(244, 177, 177);
+  background-color: #f6adbe;
   color: white;
   margin-top: 5px;
   border-radius: 24px;
@@ -279,14 +288,14 @@ label {
 .login-btn:hover{
   transform: scale(1.03);
   letter-spacing: 4px;
-  background-color: #f8b5e4 !important;
+  background-color: #fc88a3 !important;
   color: #ffffff  !important;
 }
 .login-btn a{
   width: 75%;
   justify-content: center;
   align-items: center;
-  background-color: rgb(244, 177, 177)!important;
+  background-color: fc88a3!important;
   color: white!important;
   margin-top: 5px;
   border-radius: 24px;
@@ -301,7 +310,7 @@ label {
 .login-btn:hover a{
   transform: scale(1.03);
   letter-spacing: 4px;
-  background-color: #f8b5e4 !important;
+  background-color: fc88a3 !important;
   color: #ffffff  !important;
 }
 

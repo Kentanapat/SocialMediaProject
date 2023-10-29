@@ -1,7 +1,21 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import background from "./welcomeBG4.gif";
 const LoginForm = ({ isShowLogin }) => {
     return (
+    <div
+        className="bk_Img"
+        style={{
+          backgroundImage: "url(" + background + ")",
+          backgroundPosition: 'center',
+          backgroundSize: "cover",
+          backgroundRepeat: 'no-repeat',
+          width: '1700px',
+          height: '900px',
+          right: '145px',
+          bottom: '50px'
+        }}
+      >
         <div className={`${!isShowLogin ? "active" : ""} show`}>
             <div className="login-form">
                 <div className="form-box solid">
@@ -17,6 +31,7 @@ const LoginForm = ({ isShowLogin }) => {
                 </div>
             </div>
         </div>
+    </div>
     );
 }
 

@@ -13,9 +13,9 @@ function PostBox() {
          </div>
          <input className="postbox_img" placeholder="Enter image URL" type="text"/>
        <Button className="postbox_btn">Post</Button>
-     </from>      
+     </from>
     </div>
   )
-  
+
  }
  export default PostBox;
