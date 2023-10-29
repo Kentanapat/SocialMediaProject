@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PostBox from "../postbox/Postbox";
+import axios from "axios";
 import "./Post.css"
 import FeedPost from "../feedpost/FeedPost";
 
@@ -18,9 +19,8 @@ function Post(){
        text={post.text} 
        avatar={post.avatar}
        image={post.image} />
-
      ))}
-       
+
 
        </div>
     );

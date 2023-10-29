@@ -8,7 +8,7 @@ import {FaBookmark, FaRegShareSquare} from "react-icons/fa"
 function FeedPost({displayName ,text, image, avatar}) {
    return(
         <div className="feedpost">
-       <div className="feed_avata">
+       <div className="feed_avatar">
         <RxAvatar src={avatar}/>
        </div>
     <div className="feed_body">

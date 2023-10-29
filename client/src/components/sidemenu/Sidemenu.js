@@ -42,27 +42,30 @@ function Sidemenu(){
         <div className="sidebar">
         <GiRoyalLove className="sidebar__loveIcon"/>
         
-       
-        < SidebarOption active Icon={FaHome} text="Home"/>
-        <Link to="./search" className='linksearch'>
+       <Link to="/mainmenu" className='linkhome'>
+        < SidebarOption Icon={FaHome} text="Home"/>
+        </Link>
+
+        <Link to="/search" className='linksearch'>
         < SidebarOption Icon={BsSearchHeartFill} text="Search"/>
         </Link>
         
-        <Link to="./noti" className='linknoti'>
+        <Link to="/noti" className='linknoti'>
         < SidebarOption Icon={MdNotifications} text="Notifications"/>
         </Link>
-        <Link to="./message" className='linkmessage'>
+        <Link to="/message" className='linkmessage'>
         < SidebarOption Icon={FaFacebookMessenger} text="Messager"/>
         </Link>
-        <Link to="./fav" className='linkfav'>
+        <Link to="/fav" className='linkfav'>
         < SidebarOption Icon={FaBookmark} text="Bookmark"/>
         </Link>
-        <Link to="./profile" className='linkpro'>
+        <Link to="/profile" className='linkpro'>
         < SidebarOption Icon={CgProfile} text="Profile"/>
         </Link>
-        <Link to="./setting" className='linkset'>
+        <Link to="/setting" className='linkset'>
         < SidebarOption Icon={IoIosSettings} text="Setting" />
          </Link>
+
        <Button className="sidebar__post" fullWidth>POST</Button>
         </div>
        

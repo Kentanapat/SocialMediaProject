@@ -82,10 +82,8 @@ const SignUpForm = ({ isShowSignUp }) => {
                 <div className="submitform-box solid">
                     <form>
                         <h1 className="signup-text" style={{ fontFamily: 'Itim, sans-serif' }} >Account Sign Up</h1>
-                        <label style={{ fontFamily: 'Itim, sans-serif' }}>First Name</label><br></br>
-                        <input type="text" name="firstname" className="signup-box" /><br></br>
-                        <label style={{ fontFamily: 'Itim, sans-serif' }}>Last Name</label><br></br>
-                        <input type="text" name="lastname" className="signup-box" /><br></br>
+                        <label style={{ fontFamily: 'Itim, sans-serif' }}>Username</label><br></br>
+                        <input type="text" name="username" className="signup-box" /><br></br>
                         <label style={{ fontFamily: 'Itim, sans-serif' }}>Email</label><br></br>
                         <input type="text" name="email" className="signup-box" /><br></br>
                         <label style={{ fontFamily: 'Itim, sans-serif' }}>Password</label><br></br>
