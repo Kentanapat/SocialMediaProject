@@ -1,240 +1,109 @@
-body, html {
-  /* height: 100%; */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  place-items: center;
-  font-family: 'Itim, sans-serif';
-  overflow: hidden;
-}
-
-code {
-  font-family: 'Itim, sans-serif';
-}
-
 .App {
-  font-family: 'Itim, sans-serif';
-  text-align: center;
-}
+    font-family: 'Itim, sans-serif';
+    text-align: center;
+  }
 
-.bk_Img {
-  position: relative;
-}
+  .bk_Img {
+    position: relative;
+  }
 
-.loginicon {
-  position: absolute;
-  width: 200px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bolder;
-  color: #000000;
-  height: 80px;
-  left: 560px;
-  top: 520px;
-  background:#ffffff;
-  border-radius: 24px;
-  cursor: pointer;
+  .navbar {
+    position: absolute;
+    background-color: #fee1e8;
+    width: 100%;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .SignUp-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
   
-}
+  .SUform-box{
+    margin-top: 7vh;
+    opacity:80%;
+    background: #ffffff;
+    padding-right: 80px;
+    padding-left: 80px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
+  }
 
-.loginicon:hover{
-  color: white;
-}
+  .SignUp-text{
+    width: 100%;
+    color: rgba(0, 0, 0, 0.76);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.76);
+    line-height: 30px;
+    width: 100%;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+  }
 
-.SignUpicon {
-  position: absolute;
-  width: 200px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bolder;
-  color: #000000;
-  height: 80px;
-  left: 1060px;
-  top: 520px;
-  background:#ffffff;
-  border-radius: 24px;
-  cursor: pointer;
-}
+  label {
+    color:rgba(0, 0, 0, 0.76);
+    width: 100%;
+    text-align: center;
+  }
 
-.SignUpicon:hover{
-  color: white;
-}
+  .SignUp-box{
+    border: 5px solid rgba(0, 0, 0, 0.103);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 2px;
+    padding-left: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 5px;
+    font-size: 11pt;
+    background: transparent;
+    transition: 1s;
+    outline: none;
+  }
 
-.login-form{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* min-height: 100vh; */
-  position: relative;
-  bottom: 80px;
-}
+  .SignUp-btn{
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6adbe;
+    color: white;
+    margin-top: 5px;
+    border-radius: 24px;
+    border: none;
+    font-size: 15pt;
+    font-weight: 700;
+    transition: 1s;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
 
-.SignUp-form{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* min-height: 100vh; */
-  position: relative;
-  bottom: 500px;
-  left: 65px;
-}
+  .SignUp-btn:hover{
+    transform: scale(1.03);
+    letter-spacing: 4px;
+    background-color: #fc88a3;
+    color: #ffffff;
+  }
 
-.form-box{
-  margin-top: 47vh;
-  margin-left: 25vh;
-  opacity:100%;
-  background: #ffffff;
-  padding-right: 80px;
-  padding-left: 80px;
-  border-radius: 20px;
-  box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
-}
-.SUform-box{
-  margin-top: 0vh;
-  opacity:100%;
-  background: #ffffff;
-  padding-right: 80px;
-  padding-left: 80px;
-  border-radius: 20px;
-  box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
+  .showsu {
+    display: block;
+    transition: 800ms;
+    opacity: 1;
+  }
+
+  .showsu.activesu {
+    transform: translateY(100px) scale(0) rotateY(180deg);
+    opacity: 0;
+  }
+
   
-}
-
-.login-text{
-  width: 100%;
-  color: rgba(0, 0, 0, 0.76);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.76);
-  line-height: 30px;
-  width: 100%;
-  font-weight: bolder;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5vh;
-}
-.SignUp-text{
-  width: 100%;
-  color: rgba(0, 0, 0, 0.76);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.76);
-  line-height: 30px;
-  width: 100%;
-  font-weight: bolder;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5vh;
-}
-
-label {
-  color:rgba(0, 0, 0, 0.76);
-  width: 100%;
-  text-align: center;
-}
-
-.login-box{
-  border: 5px solid rgba(0, 0, 0, 0.103);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  padding: 2px;
-  padding-left: 10px;
-  letter-spacing: 1px;
-  font-weight: 600;
-  margin: 5px;
-  font-size: 11pt;
-  background: transparent;
-  transition: 1s;
-  outline: none;
-}
-.SignUp-box{
-  border: 5px solid rgba(0, 0, 0, 0.103);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  padding: 2px;
-  padding-left: 50px;
-  letter-spacing: 1px;
-  font-weight: 600;
-  margin: 5px;
-  font-size: 11pt;
-  background: transparent;
-  transition: 1s;
-  outline: none;
-}
-
-.login-btn{
-  width: 75%;
-  justify-content: center;
-  align-items: center;
-  background-color: #f6adbe;
-  color: white;
-  margin-top: 5px;
-  border-radius: 24px;
-  border: none;
-  font-size: 15pt;
-  font-weight: 700;
-  transition: 1s;
-  outline: none;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-.SignUp-btn{
-  width: 75%;
-  justify-content: center;
-  align-items: center;
-  background-color: #f6adbe;
-  color: white;
-  margin-top: 5px;
-  border-radius: 24px;
-  border: none;
-  font-size: 15pt;
-  font-weight: 700;
-  transition: 1s;
-  outline: none;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-
-.login-btn:hover{
-  transform: scale(1.03);
-  letter-spacing: 4px;
-  background-color: #fc88a3;
-  color: #ffffff;
-}
-.SignUp-btn:hover{
-  transform: scale(1.03);
-  letter-spacing: 4px;
-  background-color: #fc88a3;
-  color: #ffffff;
-}
-
-.show {
-  display: block;
-  transition: 800ms;
-  opacity: 1;
-}
-.showsu {
-  display: block;
-  transition: 800ms;
-  opacity: 1;
-}
-
-.show.active {
-  transform: translateY(100px) scale(0) rotateY(180deg);
-  opacity: 0;
-}
-.showsu.activesu {
-  transform: translateY(100px) scale(0) rotateY(180deg);
-  opacity: 0;
-}
