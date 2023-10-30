@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 
 const PostSchema = new mongoose.Schema(
   {
-    userId: {
+    displayName: {
       type: String,
       required: true,
     },
-    desc: {
+    text: {
       type: String,
       max: 500,
     },

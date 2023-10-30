@@ -20,8 +20,8 @@ function Post(){
        avatar={post.avatar}
        image={post.image} 
       />
-       
      ))}
+     <FeedPost/>
        
 
        </div>

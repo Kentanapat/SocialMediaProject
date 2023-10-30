@@ -15,14 +15,13 @@ function FeedPost({displayName ,text, image, avatar}) {
      <div className="feed_header">
         <div className="feed_text">
             <h3>
-               {displayName}{" "}
-            </h3>
+               Aomsin </h3>
         </div>
         <div className="feed_description">
-            <p>{text}</p>
+            <p>Hello world</p>
         </div>
      </div>
-     <img src={image} alt=""/>
+     <img  className="m" src="https://becommon.co/wp-content/uploads/thumbnails/Thumbnail-Horizon-1-q9ott4imwahfw37gry4lp1r76ly12y7cfxaubnlvrs.jpg" alt=""/>
      <div className="feed_post_footer">
      <CiHeart className='like' fontSize="small"/>
      <BsChatDots className='comment' fontSize="small"/>

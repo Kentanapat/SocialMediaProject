@@ -22,21 +22,21 @@
 }
 .like{
     position: absolute;
-    top: 50px;
+    top: 30px;
 }
 .comment{
     position: absolute;
-    top: 50px;
+    top: 30px;
     left: 80px;
 }
 .sh{
     position: absolute;
-    top: 50px;
+    top: 30px;
     left: 180px;
 }
 .fav{
     position: absolute;
-    top: 50px;
+    top: 30px;
     left: 290px;
 }
 .feed_text >h3{
@@ -49,4 +49,8 @@
 }
 .feed_avata{
     padding: 20px;
+}
+.m{
+    width: 350px;
+    height: 200px;
 }
