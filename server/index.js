@@ -12,6 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 6001;
 const userRoute = require("./routes/users.js");
 const authRoute = require("./routes/auth.js");
+const postRoute = require("./routes/posts.js");
 
 //mongoose
 mongoose.set('strictQuery',true);
@@ -35,6 +36,7 @@ app.use(cors());
 //Routes
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/posts", postRoute);
 
 app.get("/",(req,res)=>{
   res.send("Homepage");

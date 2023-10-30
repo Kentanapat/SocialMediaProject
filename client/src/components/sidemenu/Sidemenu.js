@@ -44,6 +44,7 @@ function Sidemenu(){
         
        
         < SidebarOption active Icon={FaHome} text="Home"/>
+        
         <Link to="/search" className='linksearch'>
         < SidebarOption Icon={BsSearchHeartFill} text="Search"/>
         </Link>
